@@ -1,0 +1,118 @@
+/*--------------------- BEGIN MODULE PUBLIC SECTION --------------------*/
+html, body{
+	height: 100%;
+}
+
+body{
+	font-family: 'Microsoft JhengHei';
+	font-size: 16px;
+}
+
+img{
+	display: block;
+	max-width: 100%;
+}
+
+ul{
+	padding: 0;
+}
+
+.img-wrap{
+	padding: 10px;
+	-webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+	 0 0 40px rgba(0, 0, 0, 0.1) inset;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3),
+	 0 0 40px rgba(0, 0, 0, 0.1) inset;
+}
+
+.project-wrapper .row{
+	margin-bottom: 30px;
+}
+
+.section-title{
+	margin-bottom: 30px;
+}
+
+.vertical-block{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	-moz-transform:  translate(-50%, -50%);
+	-ms-transform:  translate(-50%, -50%);
+	-o-transform:  translate(-50%, -50%);
+	transform:  translate(-50%, -50%);
+}
+
+.skill-wrapper, 
+.project-wrapper,
+.about-wrapper{
+	margin: 90px 0;
+    position: relative;
+}
+
+/*--------------------- BEGIN MODULE BANNER SECTION --------------------*/
+.banner-wrapper{
+	height: 100%;
+}
+
+.overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #222;
+	opacity: 0;
+}
+
+.banner-wrapper{
+	position: relative;
+	background: #e1e1e1;
+}
+
+/*--------------------- BEGIN MODULE SKILL SECTION ---------------------*/
+.list__item{
+	cursor: pointer;
+    color: #fff;
+    font-size: 14px;
+    text-indent: 15px;
+    line-height: 45px;
+    height: 45px;
+    margin-bottom: 15px;
+    position: relative;
+    background: #F5F5F5 none repeat scroll 0% 0%;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1) inset;
+    border-radius: 3px;
+    border-bottom: 1px solid #f1f1f1;
+}
+
+.list__title{
+	position: absolute;
+    left: 0;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background: #32b643;
+    border-radius: 3px;
+    transition: all 1.5s;
+}
+
+.move .list__title{
+	width: 90%;
+}
+
+/*-------------------- BEGIN MODULE PROJECT SECTION --------------------*/
+.project__detail{
+	margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------- BEGIN MODULE ABOUT SECTION ----------------------*/

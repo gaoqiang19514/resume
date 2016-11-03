@@ -1,0 +1,69 @@
+
+#modal-mask{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	display: none;
+	opacity: 0.75;
+	filter: alpha(opacity=75);
+}
+#modal-main{
+	position: fixed;
+	background: #fff;
+	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
+	display: none;
+	padding: 5px;
+	width: 500px;
+	left: 50%;
+}
+
+.modal-close-button{
+	width: 30px;
+	height: 30px;
+	position: absolute;
+	right: -14px;
+	top: -11px;
+	cursor: pointer;
+	background: url(../img/icon/close.png) no-repeat;
+}
+.modal-loading{
+	position: absolute;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: url(../img/icon/loading.gif) no-repeat center center;
+}
+
+.modal-prev-button{
+	z-index: 999;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	cursor: pointer;
+}
+.modal-next-button{
+	z-index: 999;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	cursor: pointer;
+}
+.modal-prev-button-show{
+	background: url(../img/icon/fancy_nav_left.png) no-repeat 20% center;
+}
+.modal-next-button-show{
+	background: url(../img/icon/fancy_nav_right.png) no-repeat 80% center;
+}
+.modal-prev-button.disabled{
+	cursor: default;
+}
+.modal-next-button.disabled{
+	cursor: default;
+}
