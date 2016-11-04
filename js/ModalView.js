@@ -55,7 +55,7 @@ ModalView.prototype = {
 		this.bodyNode.delegate('.g-modal', 'click', function(event) {
 			event.stopPropagation();
 
-			that.itemIndex = that.getArrayIndex($(this));
+			that.getArrayIndex($(this));
 			that.displayButton();
 			that.showModal($(this).attr('data-src'));
 
@@ -144,15 +144,15 @@ ModalView.prototype = {
 	setImageSize: function(src){
 		var that = this;
 
-		// that.loading.show();
+		that.loading.show();
 		that.closeButton.hide();
 		that.modalImage.hide();
 
 		//	因为图片元素的尺寸是直接设置上去的，第二次会直接读取到上一张图片的尺寸，清空才能避免
-		that.modalImage.css({
-			width: 'auto',
-			height: 'auto'
-		});
+		// that.modalImage.css({
+		// 	width: 'auto',
+		// 	height: 'auto'
+		// });
 
 		//	取得图片的真实宽高
 		this.earlyImage(src, function(image){
@@ -168,6 +168,8 @@ ModalView.prototype = {
 
 	changeImageSize: function(width, height){
 		var that = this;
+
+		that.loading.show();
 		that.closeButton.hide();
 		that.modalImage.hide();
 
@@ -179,7 +181,8 @@ ModalView.prototype = {
 		var imageHeight  = height;
 
 		//	如果图片宽高大于浏览器的视口的宽高比，计算是否溢出
-		var scale = Math.min(windowWidth/(imageWigth + 10), windowHeight/(imageHeight + 10), 1);
+		var scale = Math.min(windowWidth/(imageWigth + 10),
+						windowHeight/(imageHeight + 10), 1);
 
 		imageWigth  = imageWigth * scale / 1.1;
 		imageHeight = imageHeight * scale / 1.1;
@@ -190,14 +193,12 @@ ModalView.prototype = {
 			height     : imageHeight,
 			marginLeft : -(imageWigth / 2),
 			top        : (windowHeight - imageHeight) / 2
-		}, 300, function() {
-
+		}, 300, function(){
+			that.loading.hide();
 			that.modalImage.css({
 				width: imageWigth - 10,
 				height: imageHeight - 10
-			}).fadeIn(function(){
-				that.loading.hide();
-			});
+			}).fadeIn();
 		});
 	},
 
@@ -234,17 +235,16 @@ ModalView.prototype = {
 	},
 
 	getArrayIndex: function(elem){
+		var that = this;
 		var index = 0;
-
+		
 		$(this.modalItemsInfoArray).each(function(i, el) {
-			index = i;
 			var id = $(elem).offset().left + $(elem).offset().top;
-
 			if(this.id === id){
-				return false;
+				that.itemIndex = i;
+				return;
 			}
 		});
-		return index;
 	},
 
 	switchImage: function(dir){
@@ -253,7 +253,7 @@ ModalView.prototype = {
 		if(dir === 'next'){
 		 	that.setImageSize(that.modalItemsInfoArray[++that.itemIndex].src);
 		}else if(dir === 'prev'){
-			 that.setImageSize(that.modalItemsInfoArray[--that.itemIndex].src);
+			that.setImageSize(that.modalItemsInfoArray[--that.itemIndex].src);
 		}
 		that.displayButton();
 	},
@@ -262,7 +262,7 @@ ModalView.prototype = {
 		var that = this;
 
 		if(!that.modalItemsInfoArray.length){return;}
-
+		lg(that.itemIndex);
 		if(that.itemIndex === 0){	
 			//	第一个元素的情况
 			that.modalPrevButton.removeClass('modal-prev-button-show');
@@ -275,7 +275,6 @@ ModalView.prototype = {
 			//	其他情况
 			that.modalPrevButton.removeClass('disabled');
 			that.modalNextButton.removeClass('disabled');
-
 		}
 	}
 };

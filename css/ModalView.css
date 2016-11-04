@@ -38,7 +38,7 @@
 }
 
 .modal-prev-button{
-	z-index: 999;
+	/*z-index: 999;*/
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -47,7 +47,7 @@
 	cursor: pointer;
 }
 .modal-next-button{
-	z-index: 999;
+	/*z-index: 999;*/
 	position: absolute;
 	right: 0;
 	top: 0;
