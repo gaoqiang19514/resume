@@ -42,16 +42,16 @@
 				<div class="col-xs-12">
 					<ul class="skill-list">
 						<li class="list__item">
-							<div class="list__title">HTML/CSS</div>
+							<div class="list__title list__title--layout">HTML/CSS</div>
 						</li>
 						<li class="list__item">
-							<div class="list__title">Javascript/jQuery/Backbone/Socket.io</div>
+							<div class="list__title list__title--script">Javascript/jQuery/Backbone/Socket.io</div>
 						</li>
 						<li class="list__item">
-							<div class="list__title">PHP/Nodejs/Express</div>
+							<div class="list__title list__title--server">PHP/Nodejs/Express</div>
 						</li>
 						<li class="list__item">
-							<div class="list__title">Git/Grunt</div>
+							<div class="list__title list__title--tool">Git/Grunt</div>
 						</li>
 					</ul>
 				</div>
@@ -231,10 +231,12 @@
 			}
 		}
 
-
 		$(window).on('scroll', transOpacity);
+
 		$(window).on('scroll', function(){
-			startMoveSkill(500, 1000, function(){
+			startMoveSkill($('.skill-list').offset().top - $(window).height() + 200,
+			 $('.skill-list').offset().top + $('.skill-list').height() / 2, 
+			 function(){
 				$('#skill').addClass('move');
 			});
 		});

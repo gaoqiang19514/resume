@@ -4,7 +4,7 @@ html, body{
 }
 
 body{
-	font-family: 'Microsoft JhengHei';
+	font-family: 'Candara', 'Microsoft JhengHei';
 	font-size: 16px;
 }
 
@@ -96,8 +96,20 @@ ul{
     transition: all 1.5s;
 }
 
-.move .list__title{
-	width: 90%;
+.move .list__title--layout{
+	width: 70%;
+}
+
+.move .list__title--script{
+	width: 65%;
+}
+
+.move .list__title--server{
+	width: 50%;
+}
+
+.move .list__title--tool{
+	width: 60%;
 }
 
 /*-------------------- BEGIN MODULE PROJECT SECTION --------------------*/
