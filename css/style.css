@@ -154,27 +154,7 @@ ul{
     margin-bottom: 4px;
 }
 
-
-
-
-
-
-
-
-
-
 /*-------------------- BEGIN MODULE ABOUT SECTION ----------------------*/
-
-
-
-
-
-
-
-
-
-
-
 
 /*-------------------- BEGIN MODULE MEDIA SECTION ----------------------*/
 @media (max-width: 768px){
@@ -186,6 +166,10 @@ ul{
     /*在小屏幕下阻止技能区块的tips显示*/
     .list__tips.show{
         display: none !important;
+    }
+
+    .list__item{
+        cursor: default;
     }
 }
 
