@@ -43,15 +43,27 @@
 					<ul class="skill-list">
 						<li class="list__item">
 							<div class="list__title list__title--layout">HTML/CSS</div>
+							<div class="list__tips">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum est quae tempora tenetur quidem velit, ex debitis in quisquam, iure dolores quis cumque deleniti ducimus nisi asperiores. Magni, sequi!
+							</div>
 						</li>
 						<li class="list__item">
 							<div class="list__title list__title--script">Javascript/jQuery/Backbone/Socket.io</div>
+							<div class="list__tips">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum est quae tempora tenetur quidem velit, ex debitis in quisquam, iure dolores quis cumque deleniti ducimus nisi asperiores. Magni, sequi!
+							</div>
 						</li>
 						<li class="list__item">
 							<div class="list__title list__title--server">PHP/Nodejs/Express</div>
+							<div class="list__tips">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum est quae tempora tenetur quidem velit, ex debitis in quisquam, iure dolores quis cumque deleniti ducimus nisi asperiores. Magni, sequi!
+							</div>
 						</li>
 						<li class="list__item">
 							<div class="list__title list__title--tool">Git/Grunt</div>
+							<div class="list__tips">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis laborum est quae tempora tenetur quidem velit, ex debitis in quisquam, iure dolores quis cumque deleniti ducimus nisi asperiores. Magni, sequi!
+							</div>
 						</li>
 					</ul>
 				</div>
@@ -74,6 +86,12 @@
 				<div class="col-xs-12 col-sm-8">
 					<div class="project__detail">
 						<h3>Ajax瀑布流</h3>
+						<div class="project__labels">
+							<div class="project__label">html</div>
+							<div class="project__label">css</div>
+							<div class="project__label">javascript</div>
+							<div class="project__label">jquery</div>
+						</div>
 						<p>动态获取浏览器窗口宽度，再根据单个图块宽度计算出每行最大可容纳图块，然后采用css定位机制，将后续图块动态追加到页面底部</p>
 						<button type="button" class="btn btn-success">链接</button>
 					</div>
@@ -89,6 +107,12 @@
 				<div class="col-xs-12 col-sm-8">
 					<div class="project__detail">
 						<h3>Bootstrap</h3>
+						<div class="project__labels">
+							<div class="project__label">html</div>
+							<div class="project__label">css</div>
+							<div class="project__label">javascript</div>
+							<div class="project__label">jquery</div>
+						</div>
 						<p>
 							个人认为bootstrap最核心的东西即数栅格系统了，它也是让bootstrap实现响应式的基础，使用起来很方便，但是也有代价，他让我们失去了一些东西，比如更个性化的设置
 						</p>
@@ -106,6 +130,12 @@
 				<div class="col-xs-12 col-sm-8">
 					<div class="project__detail">
 						<h3>图片查看器</h3>
+						<div class="project__labels">
+							<div class="project__label">html</div>
+							<div class="project__label">css</div>
+							<div class="project__label">javascript</div>
+							<div class="project__label">jquery</div>
+						</div>
 						<p>
 							用面向对象的方式写的jquery插件，采用的事件冒泡机制，功能还不是很多，后续会进行优化
 						</p>
@@ -123,6 +153,12 @@
 				<div class="col-xs-12 col-sm-8">
 					<div class="project__detail">
 						<h3>滚屏</h3>
+						<div class="project__labels">
+							<div class="project__label">html</div>
+							<div class="project__label">css</div>
+							<div class="project__label">javascript</div>
+							<div class="project__label">jquery</div>
+						</div>
 						<p>
 							去掉了滚动条，监听鼠标滚轮执行页面动画切换操作，然后滚动到指定页面时启动css3动画效果
 						</p>
@@ -140,6 +176,12 @@
 				<div class="col-xs-12 col-sm-8">
 					<div class="project__detail">
 						<h3>Macbook</h3>
+						<div class="project__labels">
+							<div class="project__label">html</div>
+							<div class="project__label">css</div>
+							<div class="project__label">javascript</div>
+							<div class="project__label">jquery</div>
+						</div>
 						<p>
 							其中用到了轮播图效果，Tab切换，滚动到指定位置加载动效淡出
 						</p>
@@ -157,15 +199,19 @@
 				<div class="col-xs-12 col-sm-8">
 					<div class="project__detail">
 						<h3>小组件</h3>
-						<p>
-							自己写的一些常用的css组件以及js组件
-						</p>
+						<div class="project__labels">
+							<div class="project__label">html</div>
+							<div class="project__label">css</div>
+							<div class="project__label">javascript</div>
+							<div class="project__label">jquery</div>
+						</div>
+						<p>自己写的一些常用的css组件以及js组件</p>
 						<button type="button" class="btn btn-success">链接</button>
 					</div>
 				</div>
 				<div class="col-xs-12 col-sm-4">
 					<div class="img-wrap">
-						<img src="img/cake.jpeg"  class="g-modal" data-src="img/cake.jpeg" alt="">
+						<img src="img/tool.jpg"  class="g-modal" data-src="img/tool_big.jpg" alt="">
 					</div>
 				</div>
 			</div>
@@ -239,7 +285,41 @@
 			 function(){
 				$('#skill').addClass('move');
 			});
-		});
+		}).trigger('scroll');
+
+		//	技能区块tips区块
+	    $('.skill-list').on('mouseenter', '.list__item ', function(){
+	       $(this).find('.list__tips').addClass('show');
+	    });
+
+	    $('.skill-list').on('mousemove', '.list__item ', function(event){
+			var pageX      = event.pageX;
+			var offsetLeft = $(this).offset().left;
+			var winW       = $(window).width();
+			var $listTips  = $(this).find('.list__tips');
+
+			console.log(event.pageY - $(this).offset().top);
+	        //	右边溢出
+	        if(pageX + $listTips.outerWidth() < winW){
+	        	$listTips.css({
+	        		top: event.pageY - $(this).offset().top,
+		        	left: pageX - offsetLeft
+		        });
+	        }else{
+	        	var right = winW - pageX;
+	        	var left = winW - (offsetLeft + $(this).width());
+
+	        	$listTips.css({
+	        		top: event.pageY - $(this).offset().top,
+	        		left: 'auto',
+		        	right: right - left
+		        });
+	        }
+	    });
+
+	    $('.skill-list').on('mouseleave', '.list__item ', function(){
+	        $(this).find('.list__tips').removeClass('show');
+	    });
 
 	});
 </script>
