@@ -51,6 +51,23 @@ ul{
     position: relative;
 }
 
+.navbar-section{
+    position: fixed;
+    right: 0;
+    left: 0;
+    padding: 20px 0;
+    transition: .4s;
+    background: transparent;
+    margin: 0;
+    z-index: 999;
+    color: #000;
+}
+
+.navbar-section.bottom{
+    background: #333;
+    padding: 10px 0;
+    color: #fff;
+}
 /*--------------------- BEGIN MODULE BANNER SECTION --------------------*/
 .banner-wrapper{
 	height: 100%;
@@ -70,7 +87,6 @@ ul{
 
 .banner-wrapper{
 	position: relative;
-	background: #e1e1e1;
 }
 
 /*--------------------- BEGIN MODULE SKILL SECTION ---------------------*/

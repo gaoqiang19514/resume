@@ -11,13 +11,13 @@
 </head>
 <body>
 	
-<!-- 	<header>
-		<nav class="navbar">
+	<header>
+		<nav class="navbar-section">
 			<div class="container">
-				Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis rem nulla eaque non voluptas sed autem nobis voluptate possimus pariatur, aliquid debitis veritatis beatae cupiditate saepe libero, placeat, odit ipsam.
+				<div class="logo"><img src="img/logo.png" alt=""></div>
 			</div>
 		</nav>
-	</header> -->
+	</header>
 
 	<div class="banner-wrapper">
 		<div class="overlay"></div>
@@ -277,6 +277,16 @@
 			}
 		}
 
+		$(window).on('scroll', function(){
+			var scrollTop = $(window).scrollTop();
+
+			if(scrollTop > 50){
+				$('.navbar-section').addClass('bottom');
+			}else{
+				$('.navbar-section').removeClass('bottom');
+			}
+		});
+
 		$(window).on('scroll', transOpacity);
 
 		$(window).on('scroll', function(){
@@ -319,6 +329,7 @@
 	    $('.skill-list').on('mouseleave', '.list__item ', function(){
 	        $(this).find('.list__tips').removeClass('show');
 	    });
+
 
 	});
 </script>
