@@ -188,7 +188,7 @@
 			imageHeight = imageHeight * scale / 1.1;
 
 			//	放大弹出层动画执行完毕后，设置图片尺寸并将其显示
-			that.modalMain.animate({
+			that.modalMain.velocity({
 				width      : imageWigth,
 				height     : imageHeight,
 				marginLeft : -(imageWigth / 2),
@@ -198,7 +198,7 @@
 				that.modalImage.css({
 					width: imageWigth - 10,
 					height: imageHeight - 10
-				}).fadeIn();
+				}).velocity('fadeIn');
 				that.closeButton.show();
 			});
 		},
@@ -263,7 +263,6 @@
 			var that = this;
 
 			if(!that.modalItemsInfoArray.length){return;}
-			lg(that.itemIndex);
 			if(that.itemIndex === 0){	
 				//	第一个元素的情况
 				that.modalPrevButton.removeClass('modal-prev-button-show');
@@ -279,7 +278,10 @@
 			}
 		}
 	};
-
+      
+               	
 	new ModalView();
+
+   	     
 
 })();

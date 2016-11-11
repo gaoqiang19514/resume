@@ -1,6 +1,7 @@
 
 #modal-mask{
 	position: fixed;
+	z-index: 9999;
 	left: 0;
 	top: 0;
 	width: 100%;
@@ -12,6 +13,7 @@
 }
 #modal-main{
 	position: fixed;
+	z-index: 10000;
 	background: #fff;
 	box-shadow: 0 1px 4px rgba(0, 0, 0, 0.27);
 	display: none;
