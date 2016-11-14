@@ -123,7 +123,7 @@
                         <p>动态获取浏览器窗口宽度,再根据单个图块宽度计算出
                         每行最大可容纳图块,然后采用css定位机制,将初始化图
                         块动态追加到页面底部,后续调用ajax获取的数据依照前面
-                        的方式一次插入</p>
+                        的方式依次插入</p>
                         <a href="http://gaoqiang19514.github.io/waterfall/" class="btn btn-success">链接</a>
                     </div>
                 </div>
@@ -178,9 +178,8 @@
                         </div>
                         <p>
                             用面向对象的方式写的jquery插件,采用的事件冒泡机制,
-                            初始化时动态生成遮罩层插入页面底部隐藏起来,当用户
-                            点击绑定了事件的图片元素时,根据浏览器窗口尺寸计算
-                            出,最合适的大图显示尺寸以及位置,然后将其展示
+                            初始化时动态生成遮罩层插入页面底部隐藏起来,当用户点击绑定了事件的图片元素时,根据浏览器窗口尺寸计算
+                            出,最合适的大图显示尺寸以及位置,然后将其展示,你可以点击右边图片以查看效果
                         </p>
                         <a href="http://gaoqiang19514.github.io/modalImage/" class="btn btn-success">链接</a>
                     </div>
@@ -207,11 +206,14 @@
                             <div class="project__label javascript">javascript</div>
                             <div class="project__label velocity">velocity</div>
                         </div>
-                        <p>
-                            该demo拿掉了以往大家用来做动画的jquery.animate方法,
+                            <p>
+                            该demo用以往大家用来做动画的jquery.animate方法,
                             转而使用了专为动画优化的velocity.js,功能更强大,
-                            效果更流畅,监听鼠标滚轮执行页面动画切换操作,
-                            维护一个数组，将数组的映射到DOM元素的层级上
+                            效果更流畅
+                            <p>
+                            主要的逻辑是监听鼠标滚轮事件,然后根据滚动的方向执行页面动画切换操作,
+                            然后页面的显示处理是通过维护一个层级数组,将数组的映射到DOM元素的层级属性上
+                            </p>
                         </p>
                         <a href="https://gaoqiang19514.github.io/scrollPage/" class="btn btn-success">链接</a>
                     </div>
@@ -298,8 +300,14 @@
 
             <div class="row">
                 <div class="col-xs-12 text-center">
-                    从不相信这个世上有一劳永逸的事情
-                    热爱前端开发,兴趣点侧重于javascript,热衷于在工作之余不断提升自己.
+                    <p>
+                    偶然间接触到前端,从最初的好奇发展为兴趣,又从兴趣转变为职业,
+                    从未发现学习也能如此充满乐趣,很庆幸自己能够从事自己爱好的职业,
+                    这一路走来,让我明白,做好任何一件事都不易,任何光鲜的表面,背后
+                    都有无数艰辛的付出,这也让我更加珍惜所拥有的一切,与此同时,我也会更加
+                    努力,脚踏实地的做好眼前的事,更要着眼于未来,不断提升自己,让自己在
+                    前端这条路上走的更远
+                    </p>
                 </div>
             </div>
         </div>
@@ -308,7 +316,7 @@
 <script src="./js/libs/jquery.min.js"></script>
 <script src="./js/libs/bootstrap.min.js"></script>
 <script src="./js/libs/velocity.min.js"></script>
-<script src="js/ModalView.js"></script>
+<script src="./js/modalView.js"></script>
 <script>
     $(function(){
         
