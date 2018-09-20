@@ -287,19 +287,19 @@ li{
 }
 
 .move .list__title--layout{
-    width: 70%;
+    width: 80%;
 }
 
 .move .list__title--script{
-    width: 65%;
+    width: 75%;
 }
 
 .move .list__title--server{
-    width: 50%;
+    width: 60%;
 }
 
 .move .list__title--tool{
-    width: 60%;
+    width: 70%;
 }
 
 /*-------------------- BEGIN MODULE PROJECT SECTION --------------------*/
