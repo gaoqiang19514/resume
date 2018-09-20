@@ -38,8 +38,8 @@
         <div class="overlay"></div>
         <div class="container">
             <div class="banner-content vertical-block text-center">
-                <h1 class="banner__title">高强</h1>
-                <h2 class="banner__subtitle">不急不燥,不用力过猛,坚定的走在前端的路上</h2>
+                <h1 class="banner__title">高&nbsp;强</h1>
+                <h2 class="banner__subtitle">不急不燥&nbsp;&nbsp;&nbsp;不用力过猛&nbsp;&nbsp;&nbsp;坚定的走在前端的路上</h2>
             </div>
         </div>
     </div>
@@ -61,22 +61,22 @@
                             <div class="list__title list__title--layout">HTML/CSS</div>
                             <ul class="list__tips">
                                 <li>熟练使用html/css进行页面布局</li>
-                                <li>熟练使用css3新特性</li>
+                                <li>熟练使用css3新特性,包括sass,styled component等css预处理技术，熟练运用BEM，OOCSS命名方法论</li>
                                 <li>掌握响应式开发,熟练使用bootstrap栅格系统</li>
                                 <li>对移动端有一定的开发经验,熟练掌握移动端各种适配方案</li>
                             </ul>
                         </li>
                         <li class="list__item">
-                            <div class="list__title list__title--script">Javascript/jQuery/Backbone/Socket.io</div>
+                            <div class="list__title list__title--script">Javascript/jQuery/Backbone/React/Vue/Socket.io</div>
                             <ul class="list__tips">
-                                <li>熟练运用javascript,包括HTML5,JavaScript,JQuery,socket.io,Backbone</li>
+                                <li>熟练运用javascript,包括HTML5,JavaScript,JQuery,socket.io,Backbone,React,Vue</li>
                                 <li>对JavaScript OOP有深刻的认识;熟练使用HTML5新增的API</li>
                                 <li>对JavaScript模块化,组件化有深入了解</li>
                                 <li>有移动端开发经验,熟悉微信开发</li>
                             </ul>
                         </li>
                         <li class="list__item">
-                            <div class="list__title list__title--server">PHP/Nodejs/Express</div>
+                            <div class="list__title list__title--server">PHP/Nodejs</div>
                             <ul class="list__tips">
                                 <li>有过后端语言学习经历,熟悉php以及thinkphp</li>
                                 <li>熟悉node.js以及express,使用其做过消息处理中心,类似在线客服的功能</li>
@@ -84,12 +84,10 @@
                             </ul>
                         </li>
                         <li class="list__item">
-                            <div class="list__title list__title--tool">Git/Grunt</div>
+                            <div class="list__title list__title--tool">构建</div>
                             <ul class="list__tips">
-                                <li>熟练BEM命名方法论(css),理解mvc构建模式</li>
-                                <li>理解数据驱动的开发理念,喜欢Backbone的开发方式,UI层面监听数据状态,进行渲染</li>
-                                <li>熟悉less/sass,熟悉npm,会使用版本开发工具git</li>
-                                <li>熟悉前端构建工具grunt等一些列grunt插件,掌握合并,压缩,图片优化等相关性能优化</li>
+                                <li>熟悉npm,掌握版本开发工具git</li>
+                                <li>熟悉前端构建工具grunt和webpack等一系列相关插件,掌握合并,压缩,图片优化等相关性能优化</li>
                             </ul>
                         </li>
                     </ul>
@@ -108,6 +106,62 @@
                     </div>
                 </div>
             </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    <div class="project__detail">
+                        <h3>图片马赛克工具</h3>
+                        <div class="project__labels">
+                            <div class="project__label html">html</div>
+                            <div class="project__label css">css</div>
+                            <div class="project__label javascript">javascript</div>
+                            <div class="project__label jquery">jquery</div>
+                            <div class="project__label ajax">ajax</div>
+                        </div>
+                        <p>采用HTML5新增的canvas以及FileReader，读取图片并映射到画布上，然后通过鼠标事件，获取用户指定坐标，针对指定坐标区域范围读取色域，然后经过计算，取得色值，将其绘制到对应区域，完成马赛克效果</p>
+                        <a href="https://github.com/gaoqiang19514/mosaic" class="btn btn-success">链接</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <div class="img-wrap">
+                            <img src="img/11.jpg" class="g-modal" data-src="img/11.jpg" alt="">
+                        </div>
+                        <div class="card__content">
+                            图片马赛克工具
+                        </div>
+                    </div>
+                </div>
+            </div>          
+            
+         
+            <div class="row">
+                <div class="col-xs-12 col-sm-8">
+                    <div class="project__detail">
+                        <h3>自定义的弹窗</h3>
+                        <div class="project__labels">
+                            <div class="project__label html">html</div>
+                            <div class="project__label css">css</div>
+                            <div class="project__label javascript">javascript</div>
+                            <div class="project__label jquery">jquery</div>
+                            <div class="project__label ajax">ajax</div>
+                        </div>
+                        <p>支持ajax异步回调配置，窗口移动，UI自定义，获取用户输入，自定义内容等等</p>
+                        <a href="https://github.com/gaoqiang19514/iconfirm" class="btn btn-success">链接</a>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-4">
+                    <div class="card">
+                        <div class="img-wrap">
+                            <img src="img/22.jpg" class="g-modal" data-src="img/22.jpg" alt="">
+                        </div>
+                        <div class="card__content">
+                            支持ajax的弹窗
+                        </div>
+                    </div>
+                </div>
+            </div>   
+            
 
             <div class="row">
                 <div class="col-xs-12 col-sm-8">

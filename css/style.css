@@ -6,6 +6,7 @@ html, body{
 body{
     font-family: 'Candara', 'Microsoft JhengHei';
     font-size: 16px;
+    line-height: 1.7;
 }
 
 img{
@@ -272,7 +273,7 @@ li{
     top: 0;
     color: #333;
     background: #fff;
-    width: 350px;
+    width: 450px;
     line-height: 1.5;
     padding: 10px 10px 10px 30px;
     background: rgba(255, 255, 255, 0.8);
